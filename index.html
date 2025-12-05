@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +16,15 @@
             margin: 0;
             background-color: #f0f2f5;
         }
+
         .container {
             background: white;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .bookmarklet {
             display: inline-block;
             background-color: #007bff;
@@ -30,29 +33,36 @@
             text-decoration: none;
             border-radius: 20px;
             font-weight: bold;
-            cursor: move; /* Indicates draggable */
+            cursor: move;
+            /* Indicates draggable */
             margin-top: 1rem;
         }
+
         .bookmarklet:hover {
             background-color: #0056b3;
         }
+
         p {
             color: #666;
             margin-bottom: 1.5rem;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Install Your Bookmarklet</h1>
         <p>Drag the button below to your bookmarks bar.</p>
-        
+
         <!-- The href contains the encoded javascript -->
-        <a href="javascript:(function(){alert('Hello from your new Bookmarklet!');})();" class="bookmarklet">My Bookmarklet</a>
-        
+        <a href="javascript:(function(){var msg='Hello from your new Bookmarklet!';var div=document.createElement('div');div.style.position='fixed';div.style.top='20px';div.style.left='50%';div.style.transform='translateX(-50%)';div.style.backgroundColor='rgba(0,0,0,0.8)';div.style.color='white';div.style.padding='10px 20px';div.style.borderRadius='5px';div.style.zIndex='10000';div.style.fontFamily='sans-serif';div.style.fontSize='14px';div.textContent=msg;document.body.appendChild(div);setTimeout(function(){document.body.removeChild(div);},3000);})();"
+            class="bookmarklet">My Bookmarklet</a>
+
         <p style="margin-top: 2rem; font-size: 0.9em;">
-            <small>Don't see the bookmarks bar? Press <strong>Cmd + Shift + B</strong> (Mac) or <strong>Ctrl + Shift + B</strong> (Windows).</small>
+            <small>Don't see the bookmarks bar? Press <strong>Cmd + Shift + B</strong> (Mac) or <strong>Ctrl + Shift +
+                    B</strong> (Windows).</small>
         </p>
     </div>
 </body>
+
 </html>
